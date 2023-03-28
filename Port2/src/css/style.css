@@ -239,7 +239,7 @@ section .title::after{
 }
 .services .title::after,
 .teams .title::after{
-    background: #111;
+    background: #11111100;
     content: "Me encontre em";
 }
 .services .serv-content .card{
@@ -616,6 +616,14 @@ footer span a:hover{
     }
 }
 @media (max-width: 500px){
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+}
+@media (max-width: 422){
     .home .home-content .text-2{
         font-size: 50px;
     }
