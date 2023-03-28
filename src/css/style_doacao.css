@@ -239,7 +239,7 @@ section .title::after{
 }
 .services .title::after,
 .teams .title::after{
-    background: #11111100;
+    background: #111;
     content: "Sou pobre";
 }
 .services .serv-content .card{
