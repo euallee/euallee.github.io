@@ -187,7 +187,7 @@ section .title::after{
 /*  sessão sobre  */
 
 .about .title::after{
-    content: "Mim ajude pfvr";
+    content: "Quem sou eu";
 }
 .about .about-content .left{
     width: 45%;
@@ -201,7 +201,7 @@ section .title::after{
     margin-bottom: 10px;
 }
 .about .about-content .right .text span{
-    color: green;
+    color: #4169e1;
 }
 .about .about-content .right p{
     text-align: justify;
@@ -228,7 +228,7 @@ section .title::after{
     object-fit: cover;
     border-radius: 6px;
 }
-/*  sessão serviços */
+/*  sessão redes */
 .services, .teams{
     background: #111;
     color: #fff;
@@ -239,8 +239,8 @@ section .title::after{
 }
 .services .title::after,
 .teams .title::after{
-    background: #11111100;
-    content: "Sou pobre";
+    background: #111;
+    content: "Me encontre em";
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
