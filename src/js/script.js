@@ -60,7 +60,7 @@ $(document).ready(function () {
             var dados = $("#contato").serialize();
 
             $.ajax({
-                url: "./pages/sendMsg.php",
+                url: "/pages/sendMsg.php",
                 data: dados,
                 dataType: "HTML",
                 method: "POST"
@@ -74,34 +74,4 @@ $(document).ready(function () {
 
         });
     });
-
-    function getIp(callback) {
-        fetch('https://ipinfo.io/187.19.133.138/json?token=40dd6167d29791', { headers: { 'Accept': 'application/json' } })
-            .then((resp) => resp.json())
-            .catch(() => {
-                return {
-                    country: 'br',
-                };
-            })
-            .then((resp) => callback(resp.country));
-    }
-    const phoneInputField = document.querySelector("#phone");
-    const phoneInput = window.intlTelInput(phoneInputField, {
-        initialCountry: "auto",
-        geoIpLookup: getIp,
-        preferredCountries: ["br", "us", "ar", "pt"],
-        utilsScript:
-            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-    });
-    const info = document.querySelector(".alert-info");
-    const error = document.querySelector(".alert-error");
-
-    function process(event) {
-        event.preventDefault();
-
-        const phoneNumber = phoneInput.getNumber();
-
-        info.style.display = "";
-        info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
-    }
 });
